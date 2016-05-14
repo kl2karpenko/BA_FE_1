@@ -57,17 +57,17 @@
       </div>
       <div class="form-group">
         <label for="age">Age</label>
-        <input type="text" id="age" class="form-control"/>
+        <input type="number" id="age" class="form-control"/>
 
-        <span class="hint">Please enter your age</span>
+        <span class="hint">Please enter your age, only digits count</span>
       </div>
       <div class="form-group">
         <label for="email">E-mail</label>
-        <input type="text" id="email" class="form-control"/>
+        <input type="email" id="email" class="form-control"/>
       </div>
       <div class="form-group">
         <label for="comments">Comments</label>
-        <textarea id="comments" class="form-control"></textarea>
+        <textarea id="comments" maxlength="20" class="form-control"></textarea>
       </div>
 
       <button class="btn btn-lg btn-success pull-right">Confirm</button>
