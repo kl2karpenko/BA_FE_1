@@ -21,6 +21,7 @@
     это вы можете сделать с помощью анимации в CSS3
 
 Полезные материалы:
+
 1. https://css-tricks.com/almanac/selectors/r/required/
 2. https://css-tricks.com/almanac/selectors/i/invalid/
 3. https://css-tricks.com/almanac/selectors/m/matches/
