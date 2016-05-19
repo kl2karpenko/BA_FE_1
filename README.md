@@ -1,0 +1,1 @@
+## This is the main entry point for homework and labworks in curse of Frontend Brain Academy
