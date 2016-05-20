@@ -1,0 +1,211 @@
+// Mixins
+// --------------------------------------------------
+@import "gradients";
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.box-sizing(@boxmodel: content-box) {
+  -webkit-box-sizing: @boxmodel;
+  -moz-box-sizing: @boxmodel;
+  box-sizing: @boxmodel;
+}
+
+.center-block() {
+  float: none !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Transforms
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+  -ms-transform: scale(@ratio); // IE9 only
+  -o-transform: scale(@ratio);
+  transform: scale(@ratio);
+}
+
+.animation(@animation) {
+  -webkit-animation: @animation;
+  -o-animation: @animation;
+  animation: @animation;
+}
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+
+// Box-shadow
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+  -moz-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+  box-shadow: @shadow;
+}
+
+// background-clip
+.background-clip(@clip) {
+  -moz-background-clip: @clip;
+  -webkit-background-clip: @clip;
+  background-clip: @clip; /* prevents bg color from leaking outside the border */
+}
+
+.border(@border-width, @border-color) {
+  border: @border-width solid @border-color;
+}
+
+// Border-radius
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+
+// Single side border-radius
+.border-top-radius(@radius) {
+  border-top-right-radius: @radius;
+  border-top-left-radius: @radius;
+}
+
+.border-right-radius(@radius) {
+  border-bottom-right-radius: @radius;
+  border-top-right-radius: @radius;
+}
+
+.border-bottom-radius(@radius) {
+  border-bottom-right-radius: @radius;
+  border-bottom-left-radius: @radius;
+}
+
+.border-left-radius(@radius) {
+  border-bottom-left-radius: @radius;
+  border-top-left-radius: @radius;
+}
+
+// Sizing shortcuts
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size) {
+  .size(@size; @size);
+}
+
+// Responsive image
+.img-responsive(@display: block) {
+  display: @display;
+  width: 100% \9; // Force IE10 and below to size SVG images correctly
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+// Text Hide
+.text-hide() {
+  font: ~"0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+// Text overflow
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Placeholder text
+.placeholder(@color: #fff) {
+  &::-moz-placeholder {
+    color: @color; // Firefox
+    opacity: 1;
+  }
+  // See https://github.com/twbs/bootstrap/pull/11526
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  // Internet Explorer 10+
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+  // Safari and Chrome
+}
+
+// TEXT GRADIENTS
+
+.text-gradient(@start, @end, @color) {
+  color: @color;
+  background: -webkit-linear-gradient(top, @start 0%, @end 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  background: -o-linear-gradient(transparent, transparent);
+}
+
+.text-complicated-gradient(@start, @before_center, @after_center, @end, @color: #ffc000) {
+  color: @color;
+  background: -webkit-linear-gradient(top, @start 5%, @before_center 40%, @after_center 80%, @end 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  background: -o-linear-gradient(transparent, transparent);
+}
+
+.text-complicated-gradient-center(@start, @before_center, @after_center, @end, @color) {
+  color: @color;
+  background: -webkit-linear-gradient(top, @start 0%, @before_center 50%, @after_center 51%, @end 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  background: -o-linear-gradient(transparent, transparent);
+}
+
+// POSITION
+.absolute(@top: auto, @right: auto, @bottom: auto, @left: auto) {
+  position: absolute;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+// Blocks
+.grey-texture() {
+
+}
+
+.bg(@bg-image; @bg-repeat: no-repeat; @bg-position: 50% 0) {
+  background-image: @bg-image;
+  background-repeat: @bg-repeat;
+  background-position: @bg-position;
+}
+
+.sprite-bg(@posX, @posY) {
+  .bg(@full-sprite, no-repeat, @posX @posY);
+}
+
+.sprite-loyalty(@posX, @posY, @width, @height) {
+  .bg(@loyalty-sprite, no-repeat, @posX @posY);
+  .size(@width, @height);
+}
