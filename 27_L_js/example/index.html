@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    .scroll {
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      height: 300px;
+
+      border: 1px solid red;
+    }
+
+    .scroll-view {
+      height: 900px;
+
+      background-color: yellow;
+      position: relative;
+    }
+
+    button {
+      position: absolute;
+
+      top: 500px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll">
+  <div class="scroll-view">
+
+    <button>Click me</button>
+  </div>
+</div>
+
+<script>
+  document.querySelector('button').scrollIntoView();
+
+  var newWindow = window.open('/Homework-DZ/27_L_js/example/frame.html', 'myname');
+
+  newWindow.document.body.style.backgroundColor = 'red';
+  newWindow.document.write("Hello! I am other window");
+
+  newWindow.close();
+
+  if (newWindow.closed) {
+    alert('Close window');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    button {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<button id="clickMe">Click me!</button>
+
+<button id="clickMe2">Delete click!</button>
+
+<input type="text" value="rt grth trh"/>
+  
+<script>
+  var but = document.getElementById('clickMe');
+
+  but.addEventListener('click', function (event) {
+
+    event.preventDefault();
+  });
+
+  window.addEventListener('resize', function (event) {
+    console.log(window.innerWidth);
+
+    event.preventDefault();
+  });
+
+</script>
+
+</body>
+</html>
