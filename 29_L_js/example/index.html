@@ -3,30 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="bootstrap.min.css"/>
   <style>
-    button {
-      color: red;
+
+    body {
+      margin: 20px;
     }
+
+    a {
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
 
-<input type="text" id="onlyNumbers"/>
-  
-<script>
-  onlyNumbers.addEventListener('input', function (event) {
-    console.log(this.value);
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span>First one</span>
 
-    if (this.value.match(/\d/) && this.value.match(/\d/).length) {
-      console.log(this.value.match(/\d/) && this.value.match(/\d/).length);
+      <a class="text-danger pull-right">Delete item</a>
+    </li>
+    <li class="list-group-item">
+      <span>Second one</span>
+      <a class="text-danger pull-right">Delete item</a>
+    </li>
+  </ul>
 
-
-      this.value = this.value.slice(0, -1);
-      event.preventDefault();
-      return false;
-    }
-  });
-</script>
+  <form action="">
+    <div class="row">
+      <div class="col-xs-6 col-xs-push-1">
+        <input type="text" class="form-control" placeholder="Please enter a text to item"/>
+      </div>
+      <div class="col-xs-push-1 col-xs-2">
+        <div class="checkbox">
+          <label for="delete"><input type="checkbox" id="delete" value="">Can be deleted</label>
+        </div>
+      </div>
+      <div class="col-xs-push-1 col-xs-1">
+        <button class="btn btn-success">Add to the list</button>
+      </div>
+    </div>
+  </form>
+</div>
 
 </body>
 </html>
