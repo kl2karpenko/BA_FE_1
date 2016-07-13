@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap.min.css"/>
+  <style>
+    body {
+      margin: 20px;
+    }
+    input, textarea {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<form name="myForm" id="myForm" action="" method="get">
+  <input type="text" class="form-control" required
+         placeholder="First name" name="first_name" />
+
+  <input type="text" class="form-control"
+         placeholder="Last name" name="second_name"/>
+
+  <input type="text" class="form-control"
+         pattern="^\+380\d{2}-\d{3}-\d{2}-\d{2}$"
+         placeholder="Telephone" name="phone"/>
+
+  <input type="radio" value="female" id="female" name="gender"/>
+  <label for="female">Female</label>
+
+  <input type="radio" value="male" id="male" name="gender"/>
+  <label for="male">Male</label>
+
+  <textarea name="message" class="form-control" id="message" maxlength="30">
+    Please enter a message
+  </textarea>
+
+  <select class="form-control" name="" id="">
+    <option value="">Kiev</option>
+    <option value="">Vinniza</option>
+  </select>
+
+  <button class="btn btn-success">Submit</button>
+</form>
+
+<script>
+
+</script>
+
+
+</body>
+</html>
