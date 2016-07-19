@@ -2,5 +2,9 @@
   "name": "BA_FE_1",
   "version": "0.0.1",
   "description": "ABrain Academy materials",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "express": "3.0.2",
+    "path": "^0.12.7"
+  }
 }
