@@ -62,6 +62,8 @@ var runner1 = new Runner(); var runner2 = new Runner(); У каждого ест
 
 Если запустить первого бегуна через setInterval, а второго — через вложенный setTimeout — какой сделает больше шагов за 5 секунд?
 
+//TODO: read
+
 ```
 // первый?
 setInterval(function() {
