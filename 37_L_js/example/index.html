@@ -23,8 +23,26 @@
 
 <button class="btn btn-danger">Search</button>
 
+
+
 <script src="jquery.min.js"></script>
 <script src="script.js"></script>
 <script src="trigger.js"></script>
+
+<script>
+  $newDiv = $("<div/>", {
+    "class": "my-div",
+    id: "idDiv",
+    text: "Click me!",
+    on: {
+      click: function( event ) {
+        console.log('click');
+      }
+    }
+  });
+
+  $('body').append($newDiv);
+
+</script>
 </body>
 </html>
