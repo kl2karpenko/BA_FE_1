@@ -4,7 +4,7 @@ function name(index, c, g, t, k) {
 	});
 }
 
-name(4,5,6,7,7,8,8);
+name(4, 5, 6, 7, 7, 8, 8);
 
 var t = name.bind(window, 1, 2);
 t();
@@ -32,13 +32,15 @@ name.apply(window, [1, 2]);
 // TODO: add example
 function bind(func, context) {
 	console.log(arguments, "arguments 2");
-	return function() { // (*)
+	return function () { // (*)
 		console.log(arguments, "arguments");
 		return func.apply(context, arguments);
 	};
 }
 
-function f() { 	alert( this );   }
+function f() {
+	alert(this);
+}
 
 var g = bind(f, window);
 g(2, 3);
