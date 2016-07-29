@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work with graphic</title>
+  <link rel="stylesheet" href="bootstrap.min.css"/>
+  <style>
+    body {
+      margin: 30px;
+    }
+
+    .item {
+      height: 200px;
+      text-align: center;
+
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div id="carousel" class="carousel slide"
+     data-interval="1000"
+     data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        slide 1
+      </div>
+
+      <div class="item">
+        slide 2
+      </div>
+
+      <div class="item">
+        slide 3
+      </div>
+    </div>
+
+  <a class="left carousel-control"
+     href="#carousel" data-slide="prev">
+    Previous
+  </a>
+  <a class="right carousel-control"
+     href="#carousel" data-slide="next">
+    Next
+  </a>
+
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+</body>
+</html>

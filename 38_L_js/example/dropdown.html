@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work with graphic</title>
+  <link rel="stylesheet" href="bootstrap.min.css"/>
+  <style>
+    body {
+      margin: 30px;
+    }
+
+    h3 {
+      margin-bottom: 300px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static" id="navbar-example">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="collapsed navbar-toggle" type="button" data-toggle="collapse"
+              data-target="#navbar"><span class="sr-only">Toggle navigation</span> <span
+          class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+      <a href="#" class="navbar-brand">Bootstrap</a></div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a href="#" class="dropdown-toggle" id="drop1" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false"> Plugins <span class="caret"></span> </a>
+          <ul class="dropdown-menu" aria-labelledby="drop1">
+            <li><a href="index.html">Modal</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#section1">Section 1</a>
+        </li>
+        <li>
+          <a href="#section2">Section 2</a>
+        </li>
+        <li>
+          <a href="#section3">Section 3</a>
+        </li>
+      </ul>
+
+      <button class="btn pull-right btn-success"
+              style="margin: 7px;"
+              data-toggle="modal" data-target="#myModal"
+      >Login
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div
+    id="scrollSpyFirst"
+    style="height: 300px; position: relative;
+    overflow-y: scroll; border: 1px solid red;">
+  <h3 id="section1">Header for section 1</h3>
+  <h3 id="section2">Header for section 2</h3>
+  <h3 id="section3">Header for section 3</h3>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+<script>
+
+$('#scrollSpyFirst').scrollspy({
+  target: '#navbar'
+});
+
+$('#scrollSpyFirst').on('activate.bs.scrollspy', function () {
+  console.log(this);
+})
+
+</script>
+</body>
+</html>
