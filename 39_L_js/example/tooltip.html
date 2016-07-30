@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work with graphic</title>
+  <link rel="stylesheet" href="bootstrap.min.css"/>
+  <style>
+    body {
+      margin: 30px;
+    }
+
+    .btn {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-group">
+  <input type="text" class="form-control">
+
+  <button
+      class="btn btn-success"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="Please click here to add text to the list"
+  >Add</button>
+  <button
+      id="showTooltip"
+      class="btn btn-danger"
+  >Show tooltip</button>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+<script>
+  $(function () {
+
+    $('[data-toggle="tooltip"]').tooltip({
+      delay: 100,
+      container: 'body'
+    });
+
+    $('button:eq(1)').on('shown.bs.tooltip', function () {
+      console.log('show tooltip on 2 button');
+    });
+
+  });
+</script>
+
+</body>
+</html>
