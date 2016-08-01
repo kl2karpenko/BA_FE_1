@@ -32,6 +32,7 @@ name.apply(window, [1, 2]);
 // TODO: add example
 function bind(func, context) {
 	console.log(arguments, "arguments 2");
+
 	return function () { // (*)
 		console.log(arguments, "arguments");
 		return func.apply(context, arguments);
