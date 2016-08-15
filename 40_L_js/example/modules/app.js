@@ -24,4 +24,3 @@ requirejs(['jquery', 'bootstrap', 'freelancer'], function   ($) {
 	// });
 
 });
-
