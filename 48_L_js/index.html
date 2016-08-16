@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create jQuery plugins</title>
+
+  <style>
+
+    .tooltip {
+      position: absolute;
+
+      padding: 5px;
+      background: #f1f1f2;
+      border: 1px solid #333;
+
+      font-size: 13px;
+
+      top: 20px;
+    }
+
+    .tooltip-wrap {
+      position: relative;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="forTooltip" data-tooltip
+       title="Here is example text">Text 1</div>
+
+  <div id="element" data-tooltip
+       title="Diva Maria">Text 1</div>
+
+  <script src="jquery.min.js"></script>
+  <script src="tooltip.js"></script>
+
+  <script>
+
+    $('[data-tooltip]').tooltip();
+
+  </script>
+
+</body>
+</html>
