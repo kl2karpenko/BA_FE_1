@@ -16,29 +16,52 @@
 </head>
 <body>
 
-<div class="container">
-  The name is <span data-bind="text: personName"></span>
-  The age is <span data-bind="text: personAge"></span>
+<div class="container" id="User">
+  <!-- ko if: age() > 40 -->
+  <label data-bind="text: name"></label>
+  <label data-bind="text: age"></label>
 
   <div class="row">
-    <input type="text" class="form-control" data-bind="textInput: personName">
+    <input type="text" class="form-control" data-bind="textInput: name">
   </div>
-  <div class="row">
-    <input type="text" class="form-control" data-bind="textInput: personAge">
+
+  <div class="form-group">
+    <button
+        data-bind="click: ageAdd"
+        class="btn btn-success"
+    >
+      Add age
+    </button>
+    <button
+        class="btn btn-danger"
+    >
+      Minus age
+    </button>
   </div>
+
+  <div>
+    <label for="">Phone number</label>
+    <input type="text" class="form-control">
+    <button class="btn-warning btn">Add phone</button>
+  </div>
+  <!-- /ko -->
+
+  <ul data-bind="foreach: phones">
+    <li data-bind="text: value"></li>
+  </ul>
+
+  <input type="text" data-bind="textInput: tooltipText">
+
+  <div data-bind="tooltip: tooltipText()" >se rerh hs eth</div>
 </div>
 
-
 <script type="text/javascript" src="knockout-3.4.0.js"></script>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="tooltip.js"></script>
+<script src="person.js"></script>
 <script>
-  (function () {
-    var myViewModel = {
-      personName: ko.observable('Bob'),
-      personAge: 123
-    };
-
-    ko.applyBindings(myViewModel);
-  })();
+   ko.applyBindings(User, document.getElementById("User"));
 </script>
 </body>
 </html>
