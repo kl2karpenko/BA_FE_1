@@ -70,6 +70,6 @@ var App = React.createClass({
 });
 
 ReactDOM.render(
-	<App phones={[]}/>,
+	<App/>,
 	document.body
 );
