@@ -1,1 +1,1 @@
-## This is the main entry point for homework and labworks in curse of Frontend Brain Academy
+## This is the main entry point for homeworks and labworks for HTML, CSS and JS
