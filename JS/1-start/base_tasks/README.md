@@ -54,19 +54,3 @@ console.log(‘9’ + 9);
 ```
 
 и почему да или нет
-
-## 8 задание
-
-Что будет выведено в резлультате след. операций
-
-```
-var obj = {},
-r = 0;
-
-obj.prop = 9;
-r = obj.prop;
-delete obj.prop;
-
-console.log(obj.prop, r);
-
-```

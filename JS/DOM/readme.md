@@ -1,0 +1,1 @@
+http://theory.phphtml.net/tasks/javascript/base/zadachi-na-raboty-s-sobytiyami-atributami-i-getelementbyid-v-javascript.html
