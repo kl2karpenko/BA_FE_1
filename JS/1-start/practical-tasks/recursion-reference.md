@@ -111,3 +111,9 @@ createRangeArrayWithNumbers(-1, 3, 2) // [-1, 1, 3]
 ```
 
 ## 6 task
+
+Write a JavaScript program to calculate the factorial of a number using 1 task, but ask user for a number to get factorial from using prompt() function.
+
+## 7 task
+
+Write a JavaScript program to calculate the power of a number using 3 task, but ask user for a number and for a pow for this number using prompt() function.
