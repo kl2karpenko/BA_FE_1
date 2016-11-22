@@ -97,17 +97,17 @@ console.log(obj.number, t);
 
 ## 5 task
 
-Create function that will create new array with a pull numbers from and to given numbers,
+Create function that will create new array with a pull numbers from and to given numbers with the given interval,
 !important: it should check if the numbers is right (from has to be less that to)
 
 ```
-function createRangeArrayWithNumbers(from, to) {
+function createRangeArrayWithNumbers(from, to, interval) {
     // some code
 }
 
 createRangeArrayWithNumbers(2, 2) // false ( from has to be less that to )
-createRangeArrayWithNumbers(2, 5) // [2, 3, 4, 5]
-createRangeArrayWithNumbers(-1, 3) // [-1, 0, 1, 2, 3]
+createRangeArrayWithNumbers(2, 5, 1) // [2, 3, 4, 5]
+createRangeArrayWithNumbers(-1, 3, 2) // [-1, 1, 3]
 ```
 
 ## 6 task
