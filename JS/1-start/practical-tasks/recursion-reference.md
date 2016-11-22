@@ -105,7 +105,7 @@ function createRangeArrayWithNumbers(from, to, interval) {
     // some code
 }
 
-createRangeArrayWithNumbers(2, 2) // false ( from has to be less that to )
+createRangeArrayWithNumbers(2, 2, false) // false ( from has to be less that to )
 createRangeArrayWithNumbers(2, 5, 1) // [2, 3, 4, 5]
 createRangeArrayWithNumbers(-1, 3, 2) // [-1, 1, 3]
 ```
