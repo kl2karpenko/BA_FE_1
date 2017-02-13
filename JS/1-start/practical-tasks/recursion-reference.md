@@ -111,6 +111,27 @@ createRangeArrayWithNumbers(-1, 3, 2) // [-1, 1, 3]
 ```
 
 ## 6 task
+### Closure
+
+Example:
+
+```
+var makeFunction = function () {
+    var addOne = function (x) {
+        return x + 1;
+    };
+    return addOne; // return the function
+};
+// makeFunction is a function with no arguments
+
+var f = makeFunction();
+// f is a function that takes one argument
+
+var y = f(3);
+// now y is 4
+```
+
+Create a function that will always return a number multiply on 3!
 
 Write a JavaScript program to calculate the factorial of a number using 1 task, but ask user for a number to get factorial from using prompt() function.
 
